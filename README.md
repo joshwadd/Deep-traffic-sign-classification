@@ -34,7 +34,7 @@ The data set can be downloaded [here](https://d17h27t6h515a5.cloudfront.net/toph
 
 
 ### Exploration of the GTSRB Data-set
-
+![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/trainingdistribution.png?raw=true)
 
 ### Visualisation of Data-set
 
