@@ -47,7 +47,9 @@ On initial thought, correctly classifying traffic signs could be considered to b
 
 Many of these artefacts can be seen by viewing the images from the dataset below
 
+ ![enter image description here]( https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/ClassExamples2.png?raw=true)
  
+
 
 ***
 ## Architectures Considered
