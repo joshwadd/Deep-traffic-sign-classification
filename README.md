@@ -33,9 +33,6 @@ The size of the data-set is summarised as follows
 The data set can be downloaded [here](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip).
 
 
-### Exploration of the GTSRB Data-set
-![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/trainingdistribution.png?raw=true)
-
 ### Visualisation of Data-set
 
 On initial thought, correctly classifying traffic signs could be considered to be a fairly simple task due to the design of traffic signs being unique and showing extremely little variably in apprentice within each class. In addition to this, the designs are typically simple and are placed in positions which should be clear to drivers to identify. However there are many aspects of the GTSRB data set that is challenging from the point of view of accurate classification, these include
@@ -49,6 +46,11 @@ Many of these artefacts can be seen by viewing the images from the dataset below
 
  ![enter image description here]( https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/ClassExamples2.png?raw=true)
  
+
+### Exploration of the GTSRB Data-set
+![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/trainingdistribution.png?raw=true)
+
+
 
 
 ***
