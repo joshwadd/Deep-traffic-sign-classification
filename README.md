@@ -9,7 +9,8 @@ In this project I experimented building deep architecture for the task of correc
 
 This work was done as part of the Udacity Self Driving Car Nano-Degree program
 
-
+---
+---
 # The German Traffic Sign Recognition Benchmark Data-set
 
 Historical development of road infrastructure has been done with the human visual system being the key method of information transfer between the environment and vehicle by means of a human perception and then control. Any autonomous driving system capable of safely operating in existing road environments must then as a bare minimum be capable of human level visual recognition of the environment it operates in.  Visual classification is a key element in more complex visual recognition tasks (such as object detection and semantic segmentation) and also a key task in the visual perception of an autonomous vehicle for correct classification of road signs.
