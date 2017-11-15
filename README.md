@@ -83,7 +83,7 @@ def rotate_image(image, max_angle =15):
 ```
 
 
-![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Rotation%20example.png?raw=true)
+![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Rotationexample.png?raw=true)
 
 
 ### Translation
