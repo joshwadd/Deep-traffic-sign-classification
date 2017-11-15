@@ -151,7 +151,9 @@ Using these three transforms gives the full class preserving data augmentation p
 
 ***
 
-## Architectures Considered
+## Deep Learning Architectures
+
+For this
 
 ### AlexNet Style
 
