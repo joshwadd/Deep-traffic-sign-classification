@@ -46,12 +46,28 @@ Many of these artefacts can be seen by viewing the images from the dataset below
 
  ![enter image description here]( https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/ClassExamples2.png?raw=true)
  
+The random sample above is typical of the dataset as a whole. Variation in the brightness of each sample is typically the most notable visual degradation and should be given attention in the preprocessing stage.
+
 
 ### Exploration of the GTSRB Data-set
+
+A histogram plot of the number of each samples per class shows a large imbalance in distribution across the classes. Some classes contain as many as almost 10 times the number of samples as others. This imbalance in distribution should be addressed to prevent any bias arising in training the model on this dataset. 
+
+
+
 ![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/trainingdistribution.png?raw=true)
 
 
+***
+## Data Augmentation
 
+Observing the GTSRB data sets two things became very apparent
+
+* The dataset has a large imbalance in the number of sample occurrences across classes. That is to say some classes contain a lot more image data samples then others.
+
+* The size of the data set is insufficient for training a high capacity deep network, and over-fitting to this small training set is likely to occur.
+
+To address both of these issues, I used a data augmentation technique
 
 ***
 ## Architectures Considered
