@@ -71,7 +71,7 @@ To address both of these issues, I used data augmentation techniques to create n
 
 The data augmentation pipeline is made up of three components that will be used in series applying randomly generated parameters to generate the transformations. The transforms used are chosen so that once applied the underlying class content is maintained. For example, mirror flipping a left turn sign would make it a right turn and should not be used. The following three components make up the pipeline
 
-### Rotation
+### 1. Rotation
 
 I first apply a rotation of a random angle between -15 and +15 degrees to the input image
 ```python
@@ -86,7 +86,7 @@ def rotate_image(image, max_angle =15):
 ![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Rotationexample.png?raw=true)
 
 
-### Translation
+### 2. Translation
 
 Next I apply a random translation in the height and width up-to a maximum translation of 5 pixels.
 
@@ -102,9 +102,9 @@ def translate_image(image, max_trans = 5, height=32, width=32):
 ```
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Translationexample.png?raw=true)
 
-### Projection Transform
+### 3. Projection Transform
 
-Finally I apply a projection
+Finally I apply a projection (homography) transform with randomly selected co-ordinates
 
 ```python
 from skimage.transform import ProjectiveTransfor
@@ -139,6 +139,14 @@ def projection_transform(image, max_warp=0.8, height=32, width=32):
     output_image = warp(image, transform, output_shape=(height, width), order = 1, mode = 'edge')
     return output_image
 ```
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/RotationProjection.png?raw=true)
+
+### Full Augmentation Pipeline
+
+Using these three transforms gives the full class preserving data augmentation pipeline. Examples of typical images produced using this pipeline are shown below.
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/dataAug1.png?raw=true)
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/dataAug2.png?raw=true)
 
 
 ***
