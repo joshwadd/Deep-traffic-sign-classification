@@ -34,7 +34,7 @@ The size of the data-set is summarised as follows
 The data set can be downloaded [here](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip).
 
 
-### Visualisation of Data-set
+## Visualisation of Data-set
 
 On initial thought, correctly classifying traffic signs could be considered to be a fairly simple task due to the design of traffic signs being unique and showing extremely little variably in apprentice within each class. In addition to this, the designs are typically simple and are placed in positions which should be clear to drivers to identify. However there are many aspects of the GTSRB data set that is challenging from the point of view of accurate classification, these include
 
@@ -50,7 +50,7 @@ Many of these artefacts can be seen by viewing the images from the dataset below
 The random sample above is typical of the dataset as a whole. Variation in the brightness of each sample is typically the most notable visual degradation and should be given attention in the preprocessing stage.
 
 
-### Exploration of the GTSRB Data-set
+## Exploration of the GTSRB Data-set
 
 A histogram plot of the number of each samples per class shows a large imbalance in distribution across the classes. Some classes contain as many as almost 10 times the number of samples as others. This imbalance in distribution should be addressed to prevent any bias arising in training the model on this dataset. 
 
@@ -60,7 +60,7 @@ A histogram plot of the number of each samples per class shows a large imbalance
 
 
 ***
-## Data Augmentation
+# Data Augmentation
 
 Observing the GTSRB data sets two things became very apparent
 
