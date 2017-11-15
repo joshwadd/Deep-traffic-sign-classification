@@ -67,7 +67,11 @@ Observing the GTSRB data sets two things became very apparent
 
 * The size of the data set is insufficient for training a high capacity deep network, and over-fitting to this small training set is likely to occur.
 
-To address both of these issues, I used a data augmentation technique
+To address both of these issues, I used data augmentation techniques to create new image samples artificially, enlarging the data set using class preserving image transformations. The images were generated in such way that the resulting augmented training distribution was balanced across classes.
+
+The data augmentation pipeline is made up of three components that will be used in series applying randomly generated parameters.
+
+
 
 ***
 ## Architectures Considered
