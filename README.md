@@ -81,8 +81,30 @@ def rotate_image(image, max_angle =15):
     rotate_out = rotate(image, np.random.uniform(-max_angle, max_angle), mode='edge')
     return rotate_out
 ```
+
+
 ![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Rotation%20example.png?raw=true)
 
+
+### Translation
+
+Next I apply a random translation in the height and width up-to a maximum translation of 5 pixels.
+
+```python
+import cv2
+
+def translate_image(image, max_trans = 5, height=32, width=32):
+    translate_x = max_trans*np.random.uniform() - max_trans/2
+    translate_y = max_trans*np.random.uniform() - max_trans/2
+    translation_mat = np.float32([[1,0,translate_x],[0,1,translate_y]])
+    trans = cv2.warpAffine(image, translation_mat, (height,width))
+    return trans
+```
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Translationexample.png?raw=true)
+
+### Projection Transform
+
+Finally I apply a projection
 
 
 
