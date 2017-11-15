@@ -69,7 +69,21 @@ Observing the GTSRB data sets two things became very apparent
 
 To address both of these issues, I used data augmentation techniques to create new image samples artificially, enlarging the data set using class preserving image transformations. The images were generated in such way that the resulting augmented training distribution was balanced across classes.
 
-The data augmentation pipeline is made up of three components that will be used in series applying randomly generated parameters.
+The data augmentation pipeline is made up of three components that will be used in series applying randomly generated parameters to generate the transformations. The transforms used are chosen so that once applied the underlying class content is maintained. For example, mirror flipping a left turn sign would make it a right turn and should not be used. The following three components make up the pipeline
+
+### Rotation
+
+I first apply a rotation of a random angle between -15 and +15 degrees to the input image
+```python
+from skimage.transform import rotate
+
+def rotate_image(image, max_angle =15):
+    rotate_out = rotate(image, np.random.uniform(-max_angle, max_angle), mode='edge')
+    return rotate_out
+```
+![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Rotation%20example.png?raw=true)
+
+
 
 
 
