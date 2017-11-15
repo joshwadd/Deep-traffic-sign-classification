@@ -2,7 +2,7 @@
 
 ## Project: Build a Traffic Sign Recognition Program
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-***
+
 ## Overview
 
 In this project I experimented building deep architecture for the task of correctly classifying road traffic signs typically found on German roads. To achieve this I considered two feed forward convolutational neural network architectures implemented in python using google's Tensorflow framework via the python API. I use the the German Traffic Sign Recognition Benchmark (GTSRB) data set to train and test the deep learning models. Once satisfactory performance have been achieved on the GTSRB data set, we then apply the models to real traffic signs on German roads acquired though google maps. The classification performance of the models on these images are then evaluated.
