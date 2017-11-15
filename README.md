@@ -106,10 +106,43 @@ def translate_image(image, max_trans = 5, height=32, width=32):
 
 Finally I apply a projection
 
+```python
+from skimage.transform import ProjectiveTransfor
 
+def projection_transform(image, max_warp=0.8, height=32, width=32):
+    #Warp Location
+    d = height * 0.3 * np.random.uniform(0,max_warp)
+    
+    #Warp co-ordinates
+    tl_top = np.random.uniform(-d, d)     # Top left corner, top margin
+    tl_left = np.random.uniform(-d, d)    # Top left corner, left margin
+    bl_bottom = np.random.uniform(-d, d)  # Bottom left corner, bottom margin
+    bl_left = np.random.uniform(-d, d)    # Bottom left corner, left margin
+    tr_top = np.random.uniform(-d, d)     # Top right corner, top margin
+    tr_right = np.random.uniform(-d, d)   # Top right corner, right margin
+    br_bottom = np.random.uniform(-d, d)  # Bottom right corner, bottom margin
+    br_right = np.random.uniform(-d, d)   # Bottom right corner, right margin
+        
+    ##Apply Projection
+    transform = ProjectiveTransform()
+    transform.estimate(np.array((
+                (tl_left, tl_top),
+                (bl_left, height - bl_bottom),
+                (height - br_right, height - br_bottom),
+                (height - tr_right, tr_top)
+            )), np.array((
+                (0, 0),
+                (0, height),
+                (height, height),
+                (height, 0)
+            )))
+    output_image = warp(image, transform, output_shape=(height, width), order = 1, mode = 'edge')
+    return output_image
+```
 
 
 ***
+
 ## Architectures Considered
 
 ### AlexNet Style
