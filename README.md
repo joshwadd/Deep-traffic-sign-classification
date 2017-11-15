@@ -9,7 +9,7 @@ In this project I experimented building deep architecture for the task of correc
 
 This work was done as part of the Udacity Self Driving Car Nano-Degree program
 
-
+***
 
 # The German Traffic Sign Recognition Benchmark Data-set
 
