@@ -158,6 +158,8 @@ For the task of image classification on this data-set, I constructed two deep ar
 
 ## AlexNet Style
 
+AlexNet needs very little introduction (but I'll do so anyway)! The famous deep convolution architecture first appeared in the 2012 NIPS proceedings after having substantially improved on the current state of the art (SOTA) results for the imageNet challenges that year. The result was of such high importance as it showed the ability of deep feed forward neural networks trained in an end-2-end trained manner on large datasets using GPGPU hardware was possible. Not only possible but showed substantial performance increases compared with the handcrafted feature engineering + traditional machine learning techniques that predated it. I 
+
 
 | Layer         		|     Description	        					| Input |Output| 
 |:---------------------:|:---------------------------------------------:| :----:|:-----:|
