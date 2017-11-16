@@ -201,10 +201,25 @@ DenseNet  takes this idea one step further. In DenseNet each layer is connected 
 
 Using this architectures has several advantages over standard CNN models
 
-* Reduces the vanishing gradient problem when back-propagating gradients through the network, which improves optimisation.
+* Reduces the vanishing gradient problem when back-propagating gradients through the network, which improves optimisation in deep networks.
 
 * Improves the propagation of features through the network.
 
 * Encourages the reuse of features.
 
 * Reduces the number of parameters needed to train the network compared to other CNN models. (This can be initially surprising result, but arises as we no longer have relearn redundant features)
+
+
+Due to the feature reuse the DenseNet layers can be very narrow (a common choice is 12 feature maps per layer) in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. Each layer of the DenseNet is defined as a composite of 3 functions
+
+
+| Layer         		|    
+|:---------------------:||
+| Convolution 5x5     	| 
+| Max pooling			|
+| Convolution 5x5 	    | 
+| Max pooling			| 
+| Convolution 3x3 		| 
+| Max pooling			| 
+| Flatten				|
+|      
