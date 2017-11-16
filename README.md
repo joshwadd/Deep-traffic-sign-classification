@@ -179,3 +179,5 @@ The architecture of the network takes the following form
 
 
 ## DenseNet
+
+[DenseNet](https://arxiv.org/pdf/1608.06993.pdf) is a very recently proposed powerful neural network architecture that has been shown to produce state of the art results in visual object recognition tasks, it also won a CVPR 2017 best paper award. The DenseNet architecture can be considered to be a natural extension of the concepts underlying the ResNet architecture. 
