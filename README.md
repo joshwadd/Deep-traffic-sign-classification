@@ -196,5 +196,5 @@ DenseNet  takes this idea one step further. In DenseNet each layer is connected 
 
 
 <p align="center">
-  <img src="https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/densenet.png?raw=true" width="500" height="400>
+  <img src="https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/densenet.png?raw=true" >
 </p>
