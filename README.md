@@ -214,7 +214,7 @@ Due to the feature reuse the DenseNet layers can be very narrow (a common choice
 
 
 | Layer         		|    
-|:---------------------:||
+|:---------------------:|
 | Convolution 5x5     	| 
 | Max pooling			|
 | Convolution 5x5 	    | 
@@ -222,4 +222,4 @@ Due to the feature reuse the DenseNet layers can be very narrow (a common choice
 | Convolution 3x3 		| 
 | Max pooling			| 
 | Flatten				|
-|      
+      
