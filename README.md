@@ -165,8 +165,6 @@ The original AlexNet architecture was proposed for the Imagenet data which is mu
 The architecture of the network takes the following form
 
 
-
-
 | Layer         		|     Description	        					| Input |Output| 
 |:---------------------:|:---------------------------------------------:| :----:|:-----:|
 | Convolution 5x5     	| 1x1 stride, valid padding, RELU activation 	|**32x32x1**|28x28x48|
@@ -178,3 +176,6 @@ The architecture of the network takes the following form
 | Flatten				| 3 dimensions -> 1 dimension					|2x2x172| 688|
 | Fully Connected | connect every neuron from layer above			|688|84|
 | Fully Connected | output = number of traffic signs in data set	|84|**43**|
+
+
+## DenseNet
