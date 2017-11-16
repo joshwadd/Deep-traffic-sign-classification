@@ -213,13 +213,10 @@ Using this architectures has several advantages over standard CNN models
 Due to the feature reuse the DenseNet layers can be very narrow (a common choice is k = 12 feature maps per layer) in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. Each layer of the DenseNet is defined as a composite of 3 functions
 
 
-| Layer         		|    
+| Composite Layer       |    
 |:---------------------:|
-| Convolution 5x5     	| 
-| Max pooling			|
-| Convolution 5x5 	    | 
-| Max pooling			| 
-| Convolution 3x3 		| 
-| Max pooling			| 
-| Flatten				|
+| Batch Normalisation   | 
+| ReLu			        |
+| Convolution 3x3 	    | 
+
       
