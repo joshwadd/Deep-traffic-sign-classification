@@ -182,4 +182,10 @@ The architecture of the network takes the following form
 
 [DenseNet](https://arxiv.org/pdf/1608.06993.pdf) is a recently proposed powerful neural network architecture that has been shown to produce state of the art results in visual object recognition tasks, it also won a CVPR 2017 best paper award. The DenseNet architecture can be considered to be a natural extension of the concepts underlying the ResNet architecture. 
 
-The [ResNet](https://arxiv.org/pdf/1512.03385.pdf) architecture was proposed in 2015 by a team from Microsoft Research. ResNet was motivated by the observation that  making neural networks deeper typically results in an increase in training accuracy up until a certain depth. After a certain depth, the training accuracy's found typically begin to saturate and then rapid degradation is seen when further increasing the depth. This behaviour in training accuracy suggested that instead of overfitting (which could be expected for deeper models with increased capacity)
+The [ResNet](https://arxiv.org/pdf/1512.03385.pdf) architecture was proposed in 2015 by a team from Microsoft Research. ResNet was motivated by the observation that  making neural networks deeper typically results in an increase in training accuracy up until a certain depth. After a certain depth, the training accuracy's found typically begin to saturate and then rapid degradation is seen when further increasing the depth. This behaviour in training accuracy suggested that instead of over-fitting (which could be expected for deeper models with increased capacity) these deeper networks were instead under-fitting due to difficulties in optimisation.
+
+To address this the ResNet architecture introduced residual connections between layers of the network
+
+<p align="center">
+  <img src="https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/resnet_skipconnections.png?raw=true">
+</p>
