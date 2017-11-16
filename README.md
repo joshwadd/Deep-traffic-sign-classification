@@ -198,3 +198,13 @@ DenseNet  takes this idea one step further. In DenseNet each layer is connected 
 <p align="center">
   <img src="https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/densenet.png?raw=true" >
 </p>
+
+Using this architectures has several advantages over standard CNN models
+
+* Reduces the vanishing gradient problem when back-propagating gradients through the network, which improves optimisation.
+
+* Improves the propagation of features through the network.
+
+* Encourages the reuse of features.
+
+* Reduces the number of parameters needed to train the network ( This can be initially surprising
