@@ -154,11 +154,15 @@ Using these three transforms gives the full class preserving data augmentation p
 
 # Deep Learning Architectures
 
-For the task of image classification on this data-set, I constructed two deep architectures styled on very well known models in the literature.
+For the task of image classification on this data-set, I constructed two deep architectures styled on very well known models in the literature. The first being AlexNet which is a classic machine le
 
 ## AlexNet Style
 
-AlexNet needs very little introduction (but I'll do so anyway)! The famous deep convolution architecture first appeared in the 2012 NIPS proceedings after having substantially improved on the current state of the art (SOTA) results for the imageNet challenges that year. The result was of such high importance as it showed the ability of deep feed forward neural networks trained in an end-2-end trained manner on large datasets using GPGPU hardware was possible. Not only possible but showed substantial performance increases compared with the handcrafted feature engineering + traditional machine learning techniques that predated it. I 
+AlexNet needs very little introduction (but I'll do so anyway)! The famous deep convolution architecture first appeared in the [2012 NIPS proceedings](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) after having substantially improved on the current state of the art (SOTA) results for the [imageNet challenges](http://www.image-net.org/challenges/LSVRC/) that year. The result was of such high importance as it showed the ability of deep feed forward neural networks trained end-2-end on large scale datasets using GPGPU hardware was possible. Not only possible but showed substantial performance increases compared with the handcrafted feature engineering + traditional machine learning techniques that predated it. 
+
+The original AlexNet architecture was proposed for the Imagenet data which is much larger then the images we have in the GTSRB data set. I therefore build a much smaller CNN then the original architecture proposed in the AlexNet paper, but build  it according to the same design principles. The only difference being the [local response normalisation](https://www.tensorflow.org/api_docs/python/tf/nn/local_response_normalization) layers used in the original proposed AlexNet model are not included as these have fell out of favour in recent times. I instead include batch normalisation layers.
+
+
 
 
 | Layer         		|     Description	        					| Input |Output| 
