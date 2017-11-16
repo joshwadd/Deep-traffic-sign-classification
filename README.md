@@ -207,4 +207,4 @@ Using this architectures has several advantages over standard CNN models
 
 * Encourages the reuse of features.
 
-* Reduces the number of parameters needed to train the network ( This can be initially surprising
+* Reduces the number of parameters needed to train the network compared to other CNN models. (This can be initially surprising result, but arises as we no longer have relearn redundant features)
