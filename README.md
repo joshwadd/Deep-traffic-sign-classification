@@ -184,8 +184,10 @@ The architecture of the network takes the following form
 
 The [ResNet](https://arxiv.org/pdf/1512.03385.pdf) architecture was proposed in 2015 by a team from Microsoft Research. ResNet was motivated by the observation that  making neural networks deeper typically results in an increase in training accuracy up until a certain depth. After a certain depth, the training accuracy's found typically begin to saturate and then rapid degradation is seen when further increasing the depth. This behaviour in training accuracy suggested that instead of over-fitting (which could be expected for deeper models with increased capacity) these deeper networks were instead under-fitting due to difficulties in optimisation.
 
-To address this the ResNet architecture introduced residual connections between layers of the network
+To address this the ResNet architecture introduced residual connections between layers of the network. Doing this merges future layers with previous layers, effectively forcing the network to learn the residual (difference) information between layers. This technique has proved to be very effective giving good results on many benchmark datasets, DenseNet however takes this idea one step further.
+
 
 <p align="center">
   <img src="https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/resnet_skipconnections.png?raw=true">
 </p>
+
