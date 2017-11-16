@@ -216,7 +216,7 @@ Due to the feature reuse the DenseNet layers can be very narrow (a common choice
 | Composite Layer       |    
 |:---------------------:|
 | Batch Normalisation   | 
-| ReLu			        |
+| ReLU			        |
 | Convolution 3x3 	    | 
 
       
