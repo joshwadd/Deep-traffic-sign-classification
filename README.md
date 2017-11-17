@@ -166,16 +166,25 @@ The architecture of the network takes the following form
 
 
 | Layer         		|     Description	        					| Input |Output| 
-|:---------------------:|:---------------------------------------------:| :----:|:-----:|
-| Convolution 5x5     	| 1x1 stride, valid padding, RELU activation 	|**32x32x1**|28x28x48|
-| Max pooling			| 2x2 stride, 2x2 window						|28x28x48|14x14x48|
-| Convolution 5x5 	    | 1x1 stride, valid padding, RELU activation 	|14x14x48|10x10x96|
-| Max pooling			| 2x2 stride, 2x2 window	   					|10x10x96|5x5x96|
-| Convolution 3x3 		| 1x1 stride, valid padding, RELU activation    |5x5x96|3x3x172|
-| Max pooling			| 1x1 stride, 2x2 window        				|3x3x172|2x2x172|
-| Flatten				| 3 dimensions -> 1 dimension					|2x2x172| 688|
-| Fully Connected | connect every neuron from layer above			|688|84|
-| Fully Connected | output = number of traffic signs in data set	|84|**43**|
+|:---------------------:|:---------------------------------------------:| :----:|:----:|
+| Convolution 5x5     	| 1x1 stride, Same padding                   |**32x32x3**|32x32x64|
+| Batch Normalisation         	| Decay:0.999,    $\epsilon$ :0.001   |32x32x64|32x32x64|
+| ReLU Activation       |   |32x32x64|32x32x64|
+| Max pooling			| 2x2 stride, 3x3 window						|32x32x64|16x16x64|
+| Convolution 5x5     	| 1x1 stride, Same padding                    |16x16x64|16x16x64|
+| Batch Normalisation         	| Decay:0.999,    $\epsilon$ :0.001   |16x16x64|16x16x64|
+| ReLU Activation       |   |16x16x64|16x16x64|
+| Max pooling			| 2x2 stride, 3x3 window						|16x16x64|8x8x64|
+| Flatten				| 3 dimensions -> 1 dimension					|8x8x64|4096|
+| Fully Connected | connect every neuron from layer above			|4096|384|
+| Batch Normalisation         	| Decay:0.999,    $\epsilon$ :0.001   |384|384|
+| ReLU Activation       |   |384|384|
+| Dropout         	|  Keep Prob : 0.8  |384|384|
+| Fully Connected | connect every neuron from layer above			|384|192|
+| Batch Normalisation         	| Decay:0.999,    $\epsilon$ :0.001   |192|192|
+| ReLU Activation       |   |192|192|
+| Dropout         	|  Keep Prob : 0.8  |192|192|
+| Fully Connected | output = number of traffic signs in data set	|192|**43**|
 
 
 ## DenseNet
@@ -226,6 +235,5 @@ Due to the feature reuse the DenseNet layers can be very narrow in effect only a
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1600/1*SSn5H14SKhhaZZ5XYWN3Cg.jpeg" >
 </p>
-
 
 
