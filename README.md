@@ -241,11 +241,11 @@ Each dense block contains the same number of composite layers. In the DenseNet a
 
 ## Regularisation
 
-Both of the model architectures presented above use the same techniques for regularisation
+To reduce the generalisation gap and prevent over-fitting to training data regularisation strategies are typically used when training deep neural networks. After some experimentation with various regularisation techniques I  found  a set that were found to give good performance with both of the architectures considered
 
-* Dropout 
+* [Dropout](http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf) : Dropout provides an inexpensive approximation to training and evaluating a bagged ensemble of exponentially many neural networks. It does this by randomly setting some activation to zero in the layer it is applied to by a certain probably. The keep probabilities and locations of the dropout layers used for the two networks here are shown in the architecture descriptions above.
 
-* Batch Normalisation
+* Batch Normalisation : 
 
 * Data Augmentation
 
