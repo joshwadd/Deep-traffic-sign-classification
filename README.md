@@ -192,7 +192,7 @@ To address this the ResNet architecture introduced residual connections between 
 </p>
 
 
-DenseNet  takes this idea one step further. In DenseNet each layer is connected to every other layer in the network in a feed forward fashion.  For each layer, the feature-maps of all preceding layers are used as inputs, and its own feature-maps are used as inputs into all subsequent layers. A standard feed forward CNN with L layers will have L connections (ones between each layer), DenseNet must have (L+1)/ 2 direct connections. This setting is illustrated below
+DenseNet  takes this idea one step further. In DenseNet each layer is connected to every other layer in the network in a feed forward fashion.  For each layer, the feature-maps of all preceding layers are used as input, and its own feature-maps are concatenated with its input into a single tensor and the used as inputs into its subsequent layer. A standard feed forward CNN with L layers will have L connections (one between each layer), DenseNet must with its densely connected scheme must (L+1)/ 2 direct connections. This setting is illustrated below
 
 
 <p align="center">
@@ -210,7 +210,7 @@ Using this architectures has several advantages over standard CNN models
 * Reduces the number of parameters needed to train the network compared to other CNN models. (This can be initially surprising result, but arises as we no longer have relearn redundant features)
 
 
-Due to the feature reuse the DenseNet layers can be very narrow (a common choice is k = 12 feature maps per layer) in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. Each layer of the DenseNet is defined as a composite of 3 functions
+Due to the feature reuse the DenseNet layers can be very narrow in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. The number of feature maps added to the network at each layer is known as the growth rate of the network k which is typically chosen to be k=12 . Each layer of the DenseNet is defined as a composite of three functions
 
 
 | Composite Layer       |    
@@ -219,4 +219,4 @@ Due to the feature reuse the DenseNet layers can be very narrow (a common choice
 | ReLU			        |
 | Convolution 3x3 	    | 
 
-      
+  It is only possible to concatenate feature together that share the same dimensions. However an important aspect of any CNN model is a down-sampling the size of the data flowing through the network. In order to achieve this and still have the densely connected connections in the network, the architecture is spilt into three so called 'densely connected blocks'. The layers between the blocks are known as transition layers performing convolution and pooling.
