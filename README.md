@@ -277,8 +277,12 @@ The two model architectures where trained on the augmented training data set and
 
 ## Architecture 1: (AlexNet style) Training
 
+The [Adam](https://arxiv.org/pdf/1412.6980.pdf) SGD based optimiser was chosen with a batch size of 128. The learning rate was initially chosen to be
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/AlexnetTraining.png?raw=true)
+
 ## Architecture 2: DenseNet Training
 
-
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/DenseNetTraining.png?raw=true)
 
 
