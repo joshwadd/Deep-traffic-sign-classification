@@ -84,7 +84,7 @@ def rotate_image(image, max_angle =15):
 ```
 
 
-![enter image description here](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Rotationexample.png?raw=true)
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Rotationexample.png?raw=true)
 
 
 ### 2. Translation
@@ -140,7 +140,6 @@ def projection_transform(image, max_warp=0.8, height=32, width=32):
     output_image = warp(image, transform, output_shape=(height, width), order = 1, mode = 'edge')
     return output_image
 ```
-
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/RotationProjection.png?raw=true)
 
 ## Full Augmentation Pipeline
@@ -156,8 +155,19 @@ The augmentation pipeline was applied to images in the training set until each c
 ***
 # Data Preprocessing
 
-Observation of the data set showed a large amount of variation in brightness across images in the data set. To remove this the first pre-processing technique was to normalise the brightness across image channels
+Observation of the data set showed a large amount of variation in brightness across images in the data set. To remove this the first pre-processing technique was to normalise the brightness across image channels.
 
+```python
+import cv2
+
+def image_brightness_normalisation(image):
+    image[:,:,0] = cv2.equalizeHist(image[:,:,0])
+    image[:,:,1] = cv2.equalizeHist(image[:,:,1])
+    image[:,:,2] = cv2.equalizeHist(image[:,:,2])
+    return image
+```
+
+The resulting pixel values are then simply scaled to be in the range -0.5 and +0.5.  Any more complex statistical based pre-processing (centering, variance normalisation and whitening etc) was found not give any notable performance improvement. This could be due to the use batch-normalisation layers doing mean and variance normalisation within the network for each batch.
 
 
 ***
@@ -176,7 +186,7 @@ The architecture of the network takes the following form
 
 
 | Layer         		|     Description	        					| Input |Output| 
-|:---------------------:|:---------------------------------------------:| :----:|:----:|
+|:---------------------:|:---------------------------------------------:| :----:|:-:|
 | Convolution 5x5     	| 1x1 stride, Same padding                   |**32x32x3**|32x32x64|
 | Batch Normalisation         	| Decay: 0.999,    eps: 0.001   |32x32x64|32x32x64|
 | ReLU Activation       |   |32x32x64|32x32x64|
@@ -193,8 +203,8 @@ The architecture of the network takes the following form
 | Fully Connected | connect every neuron from layer above			|384|192|
 | Batch Normalisation         	| Decay: 0.999,    eps: 0.001   |192|192|
 | ReLU Activation       |   |192|192|
-| Dropout         	|  Keep Prob: 0.8  |192|192|
-| Fully Connected | output = number of traffic signs in data set	|192|**43**|
+| Dropout         	    |  Keep Prob: 0.8  |192|192|
+| Fully Connected      | output = number of traffic signs in data set	|192|**43**|
 
 
 ## Architecture 2 : DenseNet
@@ -261,9 +271,13 @@ To reduce the generalisation gap and prevent over-fitting to training data regul
 
 ***
 
-## Model Training
+# Model Training
 
-The two model architectures where trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample set.
+The two model architectures where trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample set. The training procedure for each network is described below
+
+## Architecture 1: (AlexNet style) Training
+
+## Architecture 2: DenseNet Training
 
 
 
