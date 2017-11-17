@@ -220,7 +220,7 @@ Using this architectures has several advantages over standard CNN models
 * Reduces the number of parameters needed to train the network compared to other CNN models. (This can be initially surprising result, but arises as we no longer have relearn redundant features)
 
 
-Due to the feature reuse the DenseNet layers can be very narrow in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. The number of feature maps added to the network at each layer is known as the growth rate of the network k which is typically chosen to be k=12 . Each layer of the DenseNet is defined as a composite of three functions
+Due to the feature reuse the DenseNet layers can be very narrow in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. The number of feature maps added to the network at each layer is known as the growth rate of the network k which is typically chosen to be a small parameter (I chose a growth factor of k=12) . Each layer of the DenseNet is defined as a composite of the functions
 
 
 | Composite Layer       |    
@@ -237,6 +237,7 @@ Due to the feature reuse the DenseNet layers can be very narrow in effect only a
   <img src="https://cdn-images-1.medium.com/max/1600/1*SSn5H14SKhhaZZ5XYWN3Cg.jpeg" >
 </p>
 
+Each dense block contains the same number of composite layers. In the DenseNet all convolutions are performed with 3x3 kernels and "SAME" padding. Before the initial dense block an conventional layer with 16 output channels is performed.
 
 
 
