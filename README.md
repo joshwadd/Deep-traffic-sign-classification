@@ -245,7 +245,7 @@ To reduce the generalisation gap and prevent over-fitting to training data regul
 
 * [Dropout](http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf) : Dropout provides an inexpensive approximation to training and evaluating a bagged ensemble of exponentially many neural networks. It does this by randomly setting some activation to zero in the layer it is applied to by a certain probably. The keep probabilities and locations of the dropout layers used for the two networks here are shown in the architecture descriptions above.
 
-* Batch Normalisation : 
+* [Batch Normalisation](https://arxiv.org/pdf/1502.03167.pdf) :  Although batch normalisation was originally proposed as a strategy to reduce internal co-variate shift between the network layers to improve the speed and robustness of the training strategy, it has also been shown to give advantageous results for generalisation. This is thought to arise due to  all training examples being seen in conjunction with other examples in the mini-batch, and the training network no longer producing deterministic values for a given training example.
 
 * Data Augmentation
 
