@@ -241,7 +241,13 @@ Each dense block contains the same number of composite layers. In the DenseNet a
 
 ## Regularisation
 
+Both of the model architectures presented above use the same techniques for regularisation
 
+* Dropout 
+
+* Batch Normalisation
+
+* Data Augmentation
 
 
 
