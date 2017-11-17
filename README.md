@@ -267,7 +267,7 @@ To reduce the generalisation gap and prevent over-fitting to training data regul
 
 * [Batch Normalisation](https://arxiv.org/pdf/1502.03167.pdf) :  Although batch normalisation was originally proposed as a strategy to reduce internal co-variate shift between the network layers to improve the speed and robustness of the training strategy, it has also been shown to give advantageous results for generalisation. This is thought to arise due to  all training examples being seen in conjunction with other examples in the mini-batch, and the training network no longer producing deterministic values for a given training example.
 
-* [Data Augmentation](https://arxiv.org/pdf/1609.08764.pdf) : Although not initially obvious data augmentation is in itself a form of regularisation. From the notorious [Deep Learning](http://www.deeplearningbook.org/) book by Goodfellow etal "Regularization is any modiﬁcation we make to a learning algorithm that is intended to reduce its generalization error but not its training error". Augmenting the data is form of applying prior knowledge of the types of distortions it is likely to encounter and can thus be seen to reduce the model variance.
+* [Data Augmentation](https://arxiv.org/pdf/1609.08764.pdf) : Although not initially obvious, data augmentation is in itself a form of regularisation. From the notorious [Deep Learning](http://www.deeplearningbook.org/) book by Goodfellow etal "Regularization is any modiﬁcation we make to a learning algorithm that is intended to reduce its generalization error but not its training error". Augmenting the data is form of applying prior knowledge of the types of distortions it is likely to encounter and can thus be seen to reduce the model variance.
 
 ***
 
