@@ -197,6 +197,7 @@ DenseNet  takes this idea one step further. In DenseNet each layer is connected 
 
 <p align="center">
   <img src="https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/densenet.png?raw=true" >
+  <figcaption></figcaption>
 </p>
 
 Using this architectures has several advantages over standard CNN models
