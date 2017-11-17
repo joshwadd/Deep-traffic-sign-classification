@@ -273,7 +273,7 @@ To reduce the generalisation gap and prevent over-fitting to training data regul
 
 # Model Training and Evaluation
 
-The two model architectures where trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample set. The training procedure for each network is described below. Both models were training using a Nvidia 1080 gt GPU
+The two model architectures were trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample data. The training procedure for each network is described below. Both models were training using a Nvidia 1080 gt GPU
 
 ## Architecture 1: (AlexNet style) Training
 
@@ -302,3 +302,9 @@ My final model results were:
 * Training accuracy: 100%
 * Validation accuracy: 99.7%
 * Test accuracy 99.02%
+
+***
+
+# Test Model on New Images
+
+Now I have done the laborious task of building, training and testing two deep learning classification models on German traffic signs, it is time to test them in the wild to see how they perform. As I don't live in Germany, images of German traffic signs from the internet will have to do.
