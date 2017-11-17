@@ -273,15 +273,17 @@ To reduce the generalisation gap and prevent over-fitting to training data regul
 
 # Model Training
 
-The two model architectures where trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample set. The training procedure for each network is described below
+The two model architectures where trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample set. The training procedure for each network is described below. Both models were training using a Nvidia 1080 gt GPU
 
 ## Architecture 1: (AlexNet style) Training
 
-The [Adam](https://arxiv.org/pdf/1412.6980.pdf) SGD based optimiser was chosen with a batch size of 128. The learning rate was initially chosen to be
+The [Adam](https://arxiv.org/pdf/1412.6980.pdf) SGD based optimiser was chosen with a batch size of 128. The learning rate was initially chosen to be 1e-3. This was decreased after 40 epochs by a factor of 10, and repeated every 10 epochs after that.
 
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/AlexnetTraining.png?raw=true)
 
 ## Architecture 2: DenseNet Training
+
+As per the recommendations in the original DenseNet paper, the SGD optimiser with [momentum](https://www.tensorflow.org/api_docs/python/tf/train/MomentumOptimizer) set to 0.9 was chosen. As the dense architecture is very memory intensive the batch size was selected to be 64. The learning rate was set to 1e-3 for the first 30 epochs and the reduced by a factor of 10 for a further 10 epochs. The training time for the dense net architecture was substantially grater then the previously considered architecture and took around 22 hours in total. 
 
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/DenseNetTraining.png?raw=true)
 
