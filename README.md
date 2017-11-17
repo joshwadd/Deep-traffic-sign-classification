@@ -156,7 +156,7 @@ Using these three transforms gives the full class preserving data augmentation p
 
 For the task of image classification on this data-set, I constructed two deep architectures styled on very well known models in the literature. The first being AlexNet which is a classic machine le
 
-## AlexNet Style
+## Architecture 1 : AlexNet Style
 
 AlexNet needs very little introduction (but I'll do so anyway)! The famous deep convolution architecture first appeared in the [2012 NIPS proceedings](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) after having substantially improved on the current state of the art (SOTA) results for the [imageNet challenges](http://www.image-net.org/challenges/LSVRC/) that year. The result was of such high importance as it showed the ability of deep feed forward neural networks trained end-2-end on large scale datasets using GPGPU hardware was possible. Not only possible but showed substantial performance increases compared with the handcrafted feature engineering + traditional machine learning techniques that predated it. 
 
@@ -187,7 +187,7 @@ The architecture of the network takes the following form
 | Fully Connected | output = number of traffic signs in data set	|192|**43**|
 
 
-## DenseNet
+## Architecture 2 : DenseNet
 
 [DenseNet](https://arxiv.org/pdf/1608.06993.pdf) is a recently proposed powerful neural network architecture that has been shown to produce state of the art results in visual object recognition tasks, it also won the CVPR 2017 best paper award. The DenseNet architecture can be considered to be a natural extension of the concepts underlying the ResNet architecture. 
 
