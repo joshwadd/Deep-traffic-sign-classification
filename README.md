@@ -271,7 +271,7 @@ To reduce the generalisation gap and prevent over-fitting to training data regul
 
 ***
 
-# Model Training
+# Model Training and Evaluation
 
 The two model architectures where trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample set. The training procedure for each network is described below. Both models were training using a Nvidia 1080 gt GPU
 
@@ -283,8 +283,22 @@ The [Adam](https://arxiv.org/pdf/1412.6980.pdf) SGD based optimiser was chosen w
 
 ## Architecture 2: DenseNet Training
 
-As per the recommendations in the original DenseNet paper, the SGD optimiser with [momentum](https://www.tensorflow.org/api_docs/python/tf/train/MomentumOptimizer) set to 0.9 was chosen. As the dense architecture is very memory intensive the batch size was selected to be 64. The learning rate was set to 1e-3 for the first 30 epochs and the reduced by a factor of 10 for a further 10 epochs. The training time for the dense net architecture was substantially grater then the previously considered architecture and took around 22 hours in total. 
+As per the recommendations in the original DenseNet paper, the SGD optimiser with [momentum](https://www.tensorflow.org/api_docs/python/tf/train/MomentumOptimizer) set to 0.9 was chosen. As the dense architecture is very memory intensive the batch size was selected to be 64. The learning rate was set to 1e-3 for the first 30 epochs and the reduced by a factor of 10 for a further 10 epochs. The training time for the dense net architecture was substantially grater then the previously considered architecture and took around 22 hours in total.  As the accuracy can be seen to slightly decrease towards the end of the DenseNet training, the final selected model was chosen to be at around 34 epochs, effectively using the early stopping strategy.
 
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/DenseNetTraining.png?raw=true)
 
 
+## Model Evaluation
+
+My final model results were:
+
+###Architecture 1:
+
+* Training accuracy: 100 %
+* Validation accuracy: 99.8%
+* Test accuracy: 98.32 %
+
+### Architecture 2: 
+* Training accuracy: 100%
+* Validation accuracy: 99.7%
+* Test accuracy 99.02%
