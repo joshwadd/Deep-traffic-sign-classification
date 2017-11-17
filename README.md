@@ -70,7 +70,7 @@ Observing the GTSRB data sets two things became very apparent
 
 To address both of these issues, I used data augmentation techniques to create new image samples artificially, enlarging the data set using class preserving image transformations. The images were generated in such way that the resulting augmented training distribution was balanced across classes.
 
-The data augmentation pipeline is made up of three components that will be used in series applying randomly generated parameters to generate the transformations. The transforms used are chosen so that once applied the underlying class content is maintained. For example, mirror flipping a left turn sign would make it a right turn and should not be used. The following three components make up the pipeline
+The data augmentation pipeline is made up of three components that will be used in series applying randomly generated parameters to generate the transformations. The transforms used are chosen so that once applied the underlying class content is maintained. For example, mirror flipping a left turn sign would make it a right turn and should not be used. The transformations were chosen to be typical of the types of distortions the classifier should be robust to. The following three components make up the pipeline
 
 ### 1. Rotation
 
@@ -140,6 +140,7 @@ def projection_transform(image, max_warp=0.8, height=32, width=32):
     output_image = warp(image, transform, output_shape=(height, width), order = 1, mode = 'edge')
     return output_image
 ```
+
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/RotationProjection.png?raw=true)
 
 ## Full Augmentation Pipeline
@@ -151,6 +152,13 @@ Using these three transforms gives the full class preserving data augmentation p
 
 
 The augmentation pipeline was applied to images in the training set until each class contained 10000 training examples. This was done to create a new augmented training data set containing 430000 samples in total.
+
+***
+# Data Preprocessing
+
+Observation of the data set showed a large amount of variation in brightness across images in the data set. To remove this the first pre-processing technique was to normalise the brightness across image channels
+
+
 
 ***
 
@@ -181,7 +189,7 @@ The architecture of the network takes the following form
 | Fully Connected       | connect every neuron from layer above			|4096|384|
 | Batch Normalisation         	| Decay: 0.999,    eps: 0.001   |384|384|
 | ReLU Activation       |   |384|384|
-| Dropout         	|  Keep Prob: 0.8  |384|384|
+| Dropout         	    |  Keep Prob: 0.8  |384|384|
 | Fully Connected | connect every neuron from layer above			|384|192|
 | Batch Normalisation         	| Decay: 0.999,    eps: 0.001   |192|192|
 | ReLU Activation       |   |192|192|
@@ -241,7 +249,7 @@ Due to the feature reuse the DenseNet layers can be very narrow in effect only a
 
 Each dense block contains the same number of composite layers. In the DenseNet all convolutions are performed with 3x3 kernels and "SAME" padding. Before the initial dense block an conventional layer with 16 output channels is performed. The sizes of the feature maps across the three dense blocks are 32x32, 16x16 and 8x8 respectively. The DenseNet configuration that I used is the (L=40 , K=12) or the 40 layer 12 growth factor version reported in the original paper.  This configuration results in each dense block containing 12 composite layers
 
-## Regularisation
+# Regularisation
 
 To reduce the generalisation gap and prevent over-fitting to training data regularisation strategies are typically used when training deep neural networks. After some experimentation with various regularisation techniques I  found  a set that were found to give good performance with both of the architectures considered
 
@@ -254,6 +262,8 @@ To reduce the generalisation gap and prevent over-fitting to training data regul
 ***
 
 ## Model Training
+
+The two model architectures where trained on the augmented training data set and validated on the validation set during the training procedure to monitor how well the model is generalising to out of training set sample set.
 
 
 
