@@ -292,7 +292,7 @@ As per the recommendations in the original DenseNet paper, the SGD optimiser wit
 
 My final model results were:
 
-###Architecture 1:
+### Architecture 1:
 
 * Training accuracy: 100 %
 * Validation accuracy: 99.8%
