@@ -277,7 +277,7 @@ The two model architectures where trained on the augmented training data set and
 
 ## Architecture 1: (AlexNet style) Training
 
-The [Adam](https://arxiv.org/pdf/1412.6980.pdf) SGD based optimiser was chosen with a batch size of 128. The learning rate was initially chosen to be 1e-3. This was decreased after 40 epochs by a factor of 10, and repeated every 10 epochs after that.
+The [Adam](https://arxiv.org/pdf/1412.6980.pdf) SGD based optimiser was chosen with a batch size of 128. The learning rate was initially chosen to be 1e-3. This was decreased after 40 epochs by a factor of 10, and repeated every 10 epochs after that. As this architecture is small the total computational time require was around 5 hours
 
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/AlexnetTraining.png?raw=true)
 
