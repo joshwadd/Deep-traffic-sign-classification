@@ -228,7 +228,7 @@ Due to the feature reuse the DenseNet layers can be very narrow in effect only a
 | Batch Normalisation   | 
 | ReLU			        |
 | Convolution 3x3 	    | 
-| Dropout 	    |
+| Dropout  (Keep Prob= 0.9) |
 
   It is only possible to concatenate feature together that share the same dimensions. However an important aspect of any CNN model is a down-sampling of the size of data flowing through the network. In order to achieve this and still have the dense connections in the network, we spilt the architecture into three so called 'densely connected blocks'. The layers between the blocks are known as transition layers performing convolution and pooling. Putting all these components together the DenseNet architecture is takes the form
 
