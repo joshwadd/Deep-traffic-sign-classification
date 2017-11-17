@@ -181,7 +181,7 @@ The architecture of the network takes the following form
 | ReLU Activation       |   |384|384|
 | Dropout         	|  Keep Prob: 0.8  |384|384|
 | Fully Connected | connect every neuron from layer above			|384|192|
-| Batch Normalisation         	| Decay: 0.999,    epsilon: 0.001   |192|192|
+| Batch Normalisation         	| Decay: 0.999,    eps: 0.001   |192|192|
 | ReLU Activation       |   |192|192|
 | Dropout         	|  Keep Prob: 0.8  |192|192|
 | Fully Connected | output = number of traffic signs in data set	|192|**43**|
