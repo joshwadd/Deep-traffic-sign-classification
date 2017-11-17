@@ -154,7 +154,7 @@ Using these three transforms gives the full class preserving data augmentation p
 
 # Deep Learning Architectures
 
-For the task of image classification on this data-set, I constructed two deep architectures styled on very well known models in the literature. The first being AlexNet which is a classic machine le
+For the task of image classification on this data-set, I constructed two deep architectures styled on very well known models in the literature. 
 
 ## Architecture 1 : AlexNet Style
 
@@ -176,7 +176,7 @@ The architecture of the network takes the following form
 | ReLU Activation       |   |16x16x64|16x16x64|
 | Max pooling			| 2x2 stride, 3x3 window						|16x16x64|8x8x64|
 | Flatten				| 3 dimensions -> 1 dimension					|8x8x64|4096|
-| Fully Connected | connect every neuron from layer above			|4096|384|
+| Fully Connected       | connect every neuron from layer above			|4096|384|
 | Batch Normalisation         	| Decay: 0.999,    eps: 0.001   |384|384|
 | ReLU Activation       |   |384|384|
 | Dropout         	|  Keep Prob: 0.8  |384|384|
