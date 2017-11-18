@@ -5,7 +5,7 @@
 
 ## Overview
 
-In this project I experimented building deep architecture for the task of correctly classifying road traffic signs typically found on German roads. To achieve this I considered two feed forward convolutational neural network architectures implemented in python using google's Tensorflow framework via the python API. I use the the German Traffic Sign Recognition Benchmark (GTSRB) data set to train and test the deep learning models. Once satisfactory performance have been achieved on the GTSRB data set, we then apply the models to real traffic signs on German roads acquired though google maps. The classification performance of the models on these images are then evaluated.
+This projected addressing a traffic sign classification problem using deep learning classification models. To achieve this I considered two feed forward convolutional neural network architectures implemented in python using google's Tensorflow framework via the python API. I use the the German Traffic Sign Recognition Benchmark (GTSRB) data set to train and test the deep learning models. Once satisfactory performance have been achieved on the GTSRB data set, we then apply the models to real traffic signs on German roads acquired though google maps. The classification performance of the models on these images are then evaluated.
 
 This work was done as part of the Udacity Self Driving Car Nano-Degree program
 
