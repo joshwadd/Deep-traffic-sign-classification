@@ -17,7 +17,7 @@ This work was done as part of the Udacity Self Driving Car Nano-Degree program
 Historical development of road infrastructure has been done with the human visual system being the key method of information transfer between the environment and vehicle by means of a human perception and then control. Any autonomous driving system capable of safely operating in existing road environments must then as a bare minimum be capable of human level visual recognition of the environment it operates in.  Visual classification is a key element within more complex visual recognition tasks (such as object detection and semantic segmentation) and also a key task in the visual perception of an autonomous vehicle for correct classification of road signs.
 
 
- The German Traffic Sign Recognition Benchmark (GTSRB) data set is a multi-class, single-image classification challenge made up of images of images of traffic signs taken from German roads, with an associated class label for each image in the dataset. The images are taken from video data from a camera on-board a moving car, the images of the signs are taken from the video data removing all temporal information.
+ The German Traffic Sign Recognition Benchmark (GTSRB) data set is a multi-class, single-image classification challenge made up of images of traffic signs taken from German roads, with an associated class label for each image in the dataset. The images are taken from video data from a camera on-board a moving car, the images of the signs are taken from the video data removing all temporal information.
 
 The size of the data-set is summarised as follows
 
