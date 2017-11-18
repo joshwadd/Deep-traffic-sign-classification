@@ -329,3 +329,4 @@ The only notable difference between the prediction accuracy of the two models wa
 
 As further work I will look to analyse the classification performance of both these classification models in more detail using confusion matrices, precision, recall and f1 scores. I am unable to do this currently due to a busy work commitments.
 
+Good accuracy results have been achieved using both considered architectures. I believe the DenseNet model could benefit from more data augmentation creating more data that has been more heavily augmented.
