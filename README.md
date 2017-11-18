@@ -307,7 +307,7 @@ My final model results were:
 
 # Test Model on New Images
 
-Now I have done the laborious task of building, training and testing two deep learning classification models on German traffic signs, it is time to test them in the wild to see how they perform. As I don't live in Germany, images of German traffic signs from the internet will have to do. I used google street view to walk the streets of Berlin and acquire 8 examples of traffic signs. These images were then resized to the appropriate sizes, prepossessed using the same methodology as before and then run through the two deep learning architectures to calculate the predicted class probabilities. These images  and class probabilities are shown below
+Now I have done the laborious task of building, training and testing two deep learning classification models on German traffic signs, it is time to test them in the wild to see how they perform. As I don't live in Germany, images of German traffic signs from the internet will have to do. I used google street view to walk the streets of Berlin and acquire 7 examples of traffic signs. These images were then resized to the appropriate sizes, prepossessed using the same methodology as before and then run through the two deep learning architectures to calculate the predicted class probabilities. These images  and class probabilities are shown below
 
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign1_stat.png?raw=true)
 
@@ -322,4 +322,10 @@ Now I have done the laborious task of building, training and testing two deep le
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign6_stat.png?raw=true)
 
 ![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign7_stat.png?raw=true)
+
+Both architectures considered correctly classified all 7 of the images testing giving them a both an effective accuracy of 100%. This agrees favourably with the accuracy found on the test set which was just below 100% accuracy with both models. Additional for all images both models show extremely high certainty of classification for the correct class (bar one example discussed below). It should be noted that all the images I found are quite easy to classify with clear visibility and small to no occlusion. 
+
+The only notable difference between the prediction accuracy of the two models was the 'keep right' example. This sign had some stickers on the face causing a small amount of occlusion. The AlexNet model still showed a near 100% probability of the correct sign, whilst the DenseNet was only 60% sure of this with a large amount of probability assigned to the second most likely class. This surprising result would suggest the AlexNet style architecture is more robust to the unwanted stickers compared with the higher test set scoring (and much more powerful) DenseNet model.
+
+As further work I will look to analyse the classification performance of both these classification models in more detail using confusion matrices, precision, recall and f1 scores. I am unable to do this currently due to a busy work commitments.
 
