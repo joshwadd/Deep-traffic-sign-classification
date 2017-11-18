@@ -307,4 +307,19 @@ My final model results were:
 
 # Test Model on New Images
 
-Now I have done the laborious task of building, training and testing two deep learning classification models on German traffic signs, it is time to test them in the wild to see how they perform. As I don't live in Germany, images of German traffic signs from the internet will have to do.
+Now I have done the laborious task of building, training and testing two deep learning classification models on German traffic signs, it is time to test them in the wild to see how they perform. As I don't live in Germany, images of German traffic signs from the internet will have to do. I used google street view to walk the streets of Berlin and acquire 8 examples of traffic signs. These images were then resized to the appropriate sizes, prepossessed using the same methodology as before and then run through the two deep learning architectures to calculate the predicted class probabilities. These images  and class probabilities are shown below
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign1_stat.png?raw=true)
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign2_stat.png?raw=true)
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign3_stat.png?raw=true)
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign4_stat.png?raw=true)
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign5_stat.png?raw=true)
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign6_stat.png?raw=true)
+
+![](https://github.com/joshwadd/Deep-traffic-sign-classification/blob/master/Example_Traffic_Signs/Sign7_stat.png?raw=true)
+
