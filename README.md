@@ -221,7 +221,7 @@ To address this the ResNet architecture introduced residual connections between 
 </p>
 
 
-DenseNet  takes this idea one step further. In DenseNet each layer is connected to every other layer in the network in a feed forward fashion.  For each layer, the feature-maps of all preceding layers are used as input, and its own feature-maps are concatenated with its input into a single tensor and the used as inputs into its subsequent layer. A standard feed forward CNN with L layers will have L connections (one between each layer), DenseNet must with its densely connected scheme must (L+1)/ 2 direct connections. This setting is illustrated below
+DenseNet  takes this idea one step further. In DenseNet each layer is connected to every other layer in the network in a feed forward fashion.  For each layer, the feature-maps of all preceding layers are used as input, and its own feature-maps are concatenated with its input into a single tensor and the used as inputs into its subsequent layer. A standard feed forward CNN with L layers will have L connections (one between each layer), DenseNet with its densely connected scheme must have (L+1)/ 2 direct connections. This setting is illustrated below
 
 
 <p align="center">
