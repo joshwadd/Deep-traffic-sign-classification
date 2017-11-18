@@ -21,7 +21,7 @@ Historical development of road infrastructure has been done with the human visua
 
 The size of the data-set is summarised as follows
 
-* Each image is 32 x 32 pixels made up of 3 colour channels formatted in RGB. Each pixel is saved using an 8 bit unsigned integer giving a total possible 256 possible values per pixel.
+* Each image is 32 x 32 pixels made up of 3 colour channels formatted in RGB. Each pixel is saved using an 8 bit unsigned integer giving a total of 256 possible values.
 
 *  Each image belongs to one of 43 unique classes/labels grouped by the design/meaning of the sign.
 
