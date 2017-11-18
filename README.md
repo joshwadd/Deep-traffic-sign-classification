@@ -257,7 +257,7 @@ Due to the feature reuse the DenseNet layers can be very narrow in effect only a
   <img src="https://cdn-images-1.medium.com/max/1600/1*SSn5H14SKhhaZZ5XYWN3Cg.jpeg" >
 </p>
 
-Each dense block contains the same number of composite layers. In the DenseNet all convolutions are performed with 3x3 kernels and "SAME" padding. Before the initial dense block an conventional layer with 16 output channels is performed. The sizes of the feature maps across the three dense blocks are 32x32, 16x16 and 8x8 respectively. The DenseNet configuration that I used is the (L=40 , K=12) or the 40 layer 12 growth factor version reported in the original paper.  This configuration results in each dense block containing 12 composite layers
+Each dense block contains the same number of composite layers. In the DenseNet all convolutions are performed with 3x3 kernels and "SAME" padding. Before the initial dense block a conventional layer with 16 output channels is performed. The sizes of the feature maps across the three dense blocks are 32x32, 16x16 and 8x8 respectively. The DenseNet configuration that I used is the (L=40 , K=12) or the 40 layer 12 growth factor version reported in the original paper.  This configuration results in each dense block containing 12 composite layers
 
 # Regularisation
 
