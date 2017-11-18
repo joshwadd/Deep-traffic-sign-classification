@@ -237,10 +237,10 @@ Using this architectures has several advantages over standard CNN models
 
 * Encourages the reuse of features.
 
-* Reduces the number of parameters needed to train the network compared to other CNN models. (This can be initially surprising result, but arises as we no longer have relearn redundant features)
+* Reduces the number of parameters needed to train the network compared to other CNN models. (This can be an initially surprising result, but arises as we no longer have relearn redundant features)
 
 
-Due to the feature reuse the DenseNet layers can be very narrow in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. The number of feature maps added to the network at each layer is known as the growth rate of the network k which is typically chosen to be a small parameter (I chose a growth factor of k=12) . Each layer of the DenseNet is defined as a composite of the functions
+Due to the feature reuse the DenseNet layers can be very narrow in effect only adding a small additional amount of features at each stage of the network and keeping the remaining features unchanged. The number of feature maps added to the network at each layer is known as the growth rate of the network k which is typically chosen to be a small parameter (I chose a growth factor of k=12) . Each layer of the DenseNet is defined as a composite of functions
 
 
 | Composite Layer       |    
@@ -250,7 +250,7 @@ Due to the feature reuse the DenseNet layers can be very narrow in effect only a
 | Convolution 3x3 	    | 
 | Dropout  (Keep Prob= 0.9) |
 
-  It is only possible to concatenate feature together that share the same dimensions. However an important aspect of any CNN model is a down-sampling of the size of data flowing through the network. In order to achieve this and still have the dense connections in the network, we spilt the architecture into three so called 'densely connected blocks'. The layers between the blocks are known as transition layers performing convolution and pooling. Putting all these components together the DenseNet architecture is takes the form
+  It is only possible to concatenate features together that share the same dimensions. However an important aspect of any CNN model is a down-sampling of the size of data flowing through the network. In order to achieve this and still have the dense connections in the network, we spilt the architecture into three so called 'densely connected blocks'. The layers between the blocks are known as transition layers performing convolution and pooling. Putting all these components together the DenseNet architecture is takes the form
 
 
 <p align="center">
